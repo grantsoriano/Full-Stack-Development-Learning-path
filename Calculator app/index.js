@@ -1,10 +1,9 @@
-const math = mathjs; // For browser
 const display = document.getElementById('display');
 
 function appendToDisplay(input){
     display.value += input;
 }
-function clearDisplay(input){
+function clearDisplay(){
     display.value = "";
 }
 function calculate(input){
@@ -17,3 +16,7 @@ function calculate(input){
         display.value = "Error";
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // You can add any additional initialization here if needed
+});
