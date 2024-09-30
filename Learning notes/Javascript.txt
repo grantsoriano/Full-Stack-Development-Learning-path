@@ -1,46 +1,222 @@
 Javascript Basics
 
 Functions
-Example: 
-function sum(x, y) {
-    return x + y;
+	Example: 
+		function sum(x, y) {
+		return x + y;
 }
 
 Strings
-String property
-* .length
-    * example:
-		let text = "Hello World";
-		text.length; // 11
+	String property
+	* .length
+		* example:
+			let text = "Hello World";
+			text.length; // 11
 
-String Methods
-* .toLowerCase()
-    * example:
-		"BLUE".toLowerCase(); // "blue";
-* .toUpperCase()
-    * example:
-		"red".toUpperCase(); // "RED"
-* .substring()
-	* syntax: 
-		someString.substring(indexStart, indexEnd)
+	String Methods
+	* .toLowerCase()
+		* example:
+			"BLUE".toLowerCase(); // "blue";
+	* .toUpperCase()
+		* example:
+			"red".toUpperCase(); // "RED"
+	* .substring()
+		* syntax: 
+			someString.substring(indexStart, indexEnd)
+		* example:
+			const language = "JavaScript";
+			language.substring(1, 4); //"ava"
+			language.substring(4); //"Script"
+	* Number.parseInt()
+		* syntax:
+			Number.parseInt(string, radix); /** radix usually is 10 **/
+		* example:
+			let str = "42";
+			Number.parseInt(str, 10); //42
+			Number.parseInt("123abc", 10); // 123
+			Number.parseInt("5 meters", 10); // 5
+			
+
+	Character Access for strings
+	* Indexing [] method
+		* example:
+			const language = "JavaScript";
+			language[0]; //first character
+			language[1]; //second character
+			language[2]; //third character
+	* .at(index) method
+		* example:
+			const language = "JavaScript";
+			language.at(0); // "J"
+			language.at(1); // "a"
+			language.at(-1); // "t"
+			language.at(-2); // "p"
+	Template Strings
+		* example:
+			`This is a template string`
+		* Multiline Strings
+			* example:
+				let text = `This is a multiline
+				string that
+				just works!`
+		* Interpolation
+			* example:
+				let language = "JavaScript";
+				`I am learning ${language}`; //"I am learning JavaScript";		
+		
+Numbers
+	Numbers Methods
+	* .toString()
+		* example:
+			let answer = 42;
+			answer.toString(); //"42"
+	* .round()
+		* example:
+			Math.round(2.1); // 2
+			Math.round(2.6); // 3
+			Math.round(2.5); // 3
+	* .floor()
+		* example:
+			Math.floor(2.1); // 2
+			Math.floor(2.6); // 2
+			Math.floor(2.5); // 2
+	* .ceil()
+		* example:
+			Math.ceil(2.1); // 3
+			Math.ceil(2.6); // 3
+			Math.ceil(2.5); // 3
+
+Operators
+	* (+) Plus operator
+		* example:
+			"Hello" + "World" //"HelloWorld"
+			let prefix = "Mrs.";
+			let name = "Sam";
+			let string = prefix + " " + name; // "Mrs. Sam"
+	* (+=) Plus equal operator
+		* example:
+			let name = "Sam";
+			name += " Blue";
+			console.log(name); // "Sam Blue"
+	* (%) Division Remainder
+		* example:
+			8 % 2; // Division remainder is 0
+			7 % 2; // Division remainder is 1 
+	Ligatures
+	* >=
+	* <=
+    * ===
+    * !==
+
+	Logical Operators
+	* && - and
+	* || - or
+	* ! - not
+		* examples:
+			2 === 3 || 5 === 5; // true
+			2 === 2 && 2 === "2" //false
+			2 === 2 && !"My string." //false
+
+
+
+	
+
+Variables
+	* let Variables	- This is especially useful when you want to create a variable 
+	that needs to be incremented/decremented (such as a counter).
+		* example:
+			let name = "Sam";
+			console.log(name);
+	* const Variables - Variables defined with const cannot be re-assigned. 
+	This means you can use the = sign only once when defining the variable.
+		* example:
+			const language = "C++"; // Cannot be re-assigned anymore
+			console.log(language); // "C++"
+			language = "Python" // ❌ Type error: this will break your script 
+
+Conditions
+	* if Conditions
+		* example:
+			const grade = 15;
+			if (grade >= 10) {
+				console.log("Passing grade");
+			}
+	* else Conditions
+		* example:
+			const grade = 3;
+			if (grade >= 10) {
+				console.log("Passing grade");
+			} else {
+				console.log("Failing grade");
+			}
+	* else if Conditions
+		* example:
+			const grade = 10;
+			if (grade > 10) {
+				console.log("Passing grade");
+			} else if (grade === 10) {
+				console.log("Passing on the limit");
+			} else {
+				console.log("Failing grade");
+			}
+	* Advanced if Conditions
+		* example:
+			function canVote(age) {
+				if (age >= 18) {
+					return true;
+				}
+				return false;
+			}
+
+Booleans
 	* example:
-		const language = "JavaScript";
-		language.substring(1, 4); //"ava"
-		language.substring(4); //"Script"
+		function isPassing(grade) {
+			if (grade >= 10) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		isPassing(12);
+	
+Arrays
+	Array properties
+	* .length property
+		* example:
+			[].length; // 0
+			const grades = [10, 8, 13, 15];
+			grades.length; // 4
+	Array Methods
+	* .push() method - adds an element in the array
+		* example:
+			const numbers = [10, 8, 13, 15];
+			numbers.push(20); // returns 5 (the new length of the array)
+			console.log(numbers); // [10, 8, 13, 15, 20];
+	* .pop()
 
-Character Access for strings
-* Indexing [] method
-    * example:
-		const language = "JavaScript";
-		language[0]; //first character
-		language[1]; //second character
-		language[2]; //third character
-* .at(index) method
-    * example:
-		const language = "JavaScript";
-		language.at(0); // "J"
-		language.at(1); // "a"
-		language.at(-1); // "t"
-		language.at(-2); // "p"
+	* .forEach() method
+		* syntax 
+			someVariable.forEach(callback)
+		* example:
+			grades.forEach(function(grade) {
+				// do something with individual grade
+				console.log(grade);
+			});
+	* .filter() method
+
+	
 
 
+	Array Accessing
+	* indexing[n] method
+		* example:
+			const users = ["Sam", "Alex", "Charley"];
+			users[1]; //"Alex"
+	* .at method
+		* example:
+			const users = ["Sam", "Alex", "Charley", "Blane", "Crane"];
+			users.at(0); //"Sam"
+			users.at(1); //"Alex"
+			users.at(-2); //"Blane"
+			users.at(-1); //"Crane"
+	
