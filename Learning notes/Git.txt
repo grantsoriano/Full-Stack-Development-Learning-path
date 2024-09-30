@@ -1,0 +1,60 @@
+Git hub core basics
+
+Core Git Concepts
+* Repository (repo): A storage location for your project, containing all versions of your files. It can be local (on your machine) or remote (on GitHub).
+* Working Directory: This is your current folder where you’re making changes to your files.
+* Staging Area: A middle step before committing. Files added to the staging area are ready to be committed but aren’t part of the project history yet.
+* Commit: A snapshot of the project at a point in time. Every commit is tracked and can be reverted to if necessary.
+* Branch: A version of your repository. Branches allow you to work on different features or fixes independently from the main codebase (often main or master).
+* Remote: A copy of your repository that is hosted somewhere else, such as on GitHub. You’ll push changes from your local repository to the remote and pull changes from the remote to your local repository.
+
+Basic Git Workflow
+1. Initialize a Git Repository (only for new projects):
+    * $ git init
+2. Clone a Repository from GitHub:
+    * $ git clone https://github.com/username/repository-name.git
+3. Check the Status of Your Repository:
+    * git status
+4. Stage Files for a Commit:
+    * to stage all changes for commit:
+        * $ git add .
+    * You can also stage specific files:
+        * $ git add filename
+5. Commit the Changes:
+    * $ git commit -m "Description of the changes"
+6. Push Changes to GitHub:
+    * Once committed, you can push the changes to the remote repository on GitHub:
+        * $ git push origin branch-name
+    * For the first push, you may need to set the upstream branch with:
+        * $ git push -u origin branch-name
+7. Pull Changes from GitHub:
+    * $ git pull origin branch-name
+
+Handling Branches
+1. Create a New Branch:
+    * $ git checkout -b branch-name
+2. Switch Between Branches:
+    * $ git checkout branch-name
+3. Merge Branches:
+    * $ git merge branch-name
+
+Remote Management
+1. Add a Remote Repository:
+    * If you have a local repository and want to add a remote GitHub repo:
+        * $ git remote add origin https://github.com/username/repository-name.git
+2. Check Remote Repositories:
+    * $ git remote -v
+
+Additional Useful Commands
+1. Undo Changes Before Committing:
+    * Undo unstaged changes in a file:
+        * $ git checkout -- filename
+    * Unstage a file:
+        * $ git reset filename
+2. View Commit History:
+    * $ git log
+3. Sync with the Remote:
+    * $ git fetch
+
+
+
