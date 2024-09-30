@@ -1,0 +1,46 @@
+Javascript Basics
+
+Functions
+Example: 
+function sum(x, y) {
+    return x + y;
+}
+
+Strings
+String property
+* .length
+    * example:
+		let text = "Hello World";
+		text.length; // 11
+
+String Methods
+* .toLowerCase()
+    * example:
+		"BLUE".toLowerCase(); // "blue";
+* .toUpperCase()
+    * example:
+		"red".toUpperCase(); // "RED"
+* .substring()
+	* syntax: 
+		someString.substring(indexStart, indexEnd)
+	* example:
+		const language = "JavaScript";
+		language.substring(1, 4); //"ava"
+		language.substring(4); //"Script"
+
+Character Access for strings
+* Indexing [] method
+    * example:
+		const language = "JavaScript";
+		language[0]; //first character
+		language[1]; //second character
+		language[2]; //third character
+* .at(index) method
+    * example:
+		const language = "JavaScript";
+		language.at(0); // "J"
+		language.at(1); // "a"
+		language.at(-1); // "t"
+		language.at(-2); // "p"
+
+
